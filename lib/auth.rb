@@ -2,13 +2,13 @@ require 'jwt'
 
 class Auth
 
-  ALGORITHIM = 'HS256'
+  ALGORITHM = 'HS256'
 
   def self.issue(payload)
     JWT.encode(
       payload,
       auth_secret,
-      ALGORHITHM
+      ALGORITHM
     )
   end
 
@@ -16,7 +16,7 @@ class Auth
     JWT.decode(token,
       auth_secret,
       true,
-      {algorithm: ALGORHITHM}).first
+      {algorithm: ALGORITHM}).first
   end
 
   def self.auth_secret
