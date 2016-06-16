@@ -6,6 +6,7 @@ class ApplicationController < ActionController::API
  end
 
  def current_user
+  binding.pry
    if auth_present?
      user = User.find(auth["user"])
      if user
@@ -20,8 +21,7 @@ class ApplicationController < ActionController::API
 
  private
    def token
-     request.env["HTTP_AUTHORIZATION"].scan(/Bearer
-       (.*)$/).flatten.last
+     request.env["HTTP_AUTHORIZATION"].scan(/Bearer (.*)$/).flatten.last
    end
 
    def auth
