@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160615193227) do
+ActiveRecord::Schema.define(version: 20160616165647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flashcard_tags", force: :cascade do |t|
+    t.integer "tag_id"
+    t.integer "flashcard_id"
+  end
+
+  add_index "flashcard_tags", ["flashcard_id"], name: "index_flashcard_tags_on_flashcard_id", using: :btree
+  add_index "flashcard_tags", ["tag_id"], name: "index_flashcard_tags_on_tag_id", using: :btree
 
   create_table "flashcards", force: :cascade do |t|
     t.string   "img_url"
@@ -28,8 +36,9 @@ ActiveRecord::Schema.define(version: 20160615193227) do
 
   create_table "lessons", force: :cascade do |t|
     t.string   "topic"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description"
   end
 
   create_table "lightboxes", force: :cascade do |t|
@@ -47,6 +56,10 @@ ActiveRecord::Schema.define(version: 20160615193227) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "username"
@@ -55,4 +68,6 @@ ActiveRecord::Schema.define(version: 20160615193227) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "flashcard_tags", "flashcards"
+  add_foreign_key "flashcard_tags", "tags"
 end

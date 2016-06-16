@@ -1,5 +1,6 @@
 class Flashcard < ActiveRecord::Base
   belongs_to :lesson
-  belongs_to :lightbox
-  
+  has_many :lightboxes
+  has_many :tags
+
 end
