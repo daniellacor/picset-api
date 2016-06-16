@@ -9,7 +9,6 @@ module Api
 
       def show
         @lesson = Lesson.find(params[:id])
-        @lesson.flashcards = LessonBuilder.new(@lesson.topic).create_flashcards
         render json: @lesson.include(:flashcards), include: ['flashcards']
       end
     end

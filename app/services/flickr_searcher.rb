@@ -5,11 +5,9 @@ class FlickrSearcher
   end
 
   def self.get_photo_metadata(photo)
-    binding.pry
-    photo_exif = photo.exif['exif'] # if photo.exif['exif']
+    photo_exif = photo.exif['exif'] if photo.exif['exif']
     metadata = {}
     unless photo_exif.detect {|f| f['label'] == 'Aperture'}.nil?
-      metadata[:img_url] = get_img_url(photo)
       metadata[:aperture] = get_aperture(photo_exif)
       metadata[:shutter_speed] = get_shutter_speed(photo_exif)
     end
@@ -19,7 +17,8 @@ class FlickrSearcher
   def self.get_aperture(exif)
     aperture = exif.detect {|f| f['label'] == 'Aperture' }
     if aperture
-      aperture = aperture['raw']
+      aperture = aperture['raw'].to_f*10
+      aperture.to_i
     end
   end
 
@@ -28,9 +27,5 @@ class FlickrSearcher
     if shutter_speed
       shutter_speed = shutter_speed['raw']
     end
-  end
-
-  def self.get_img_url(photo)
-    url = photo.source
   end
 end
