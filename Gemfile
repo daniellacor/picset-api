@@ -6,9 +6,11 @@ gem 'rails', '4.2.6'
 gem 'active_model_serializers'
 gem 'rack-cors'
 gem 'rails-api'
+gem 'flickr.rb'
 
 gem 'spring', :group => :development
-
+gem 'pry-rails', :group => :development
+gem 'figaro', :group => :development
 
 gem 'pg'
 

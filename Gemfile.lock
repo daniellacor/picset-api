@@ -42,8 +42,13 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
+    coderay (1.1.1)
     concurrent-ruby (1.0.2)
     erubis (2.7.0)
+    figaro (1.1.1)
+      thor (~> 0.14)
+    flickr.rb (1.2.1)
+      xml-simple (>= 1.0.7)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -52,6 +57,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -62,6 +68,12 @@ GEM
       pkg-config (~> 1.1.7)
     pg (0.18.4)
     pkg-config (1.1.7)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     rack (1.6.4)
     rack-cors (0.4.0)
     rack-test (0.6.3)
@@ -94,6 +106,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (11.2.2)
+    slop (3.6.0)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -106,17 +119,21 @@ GEM
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    xml-simple (1.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   active_model_serializers
+  figaro
+  flickr.rb
   pg
+  pry-rails
   rack-cors
   rails (= 4.2.6)
   rails-api
   spring
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
