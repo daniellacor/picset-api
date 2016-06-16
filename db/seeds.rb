@@ -6,7 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-aperture = Lesson.create(topic: "Aperture", description: "Learn how to control depth of field and exposure with your aperture setting")
+aperture = Lesson.create(topic: "Aperture", blurb: "Learn how to control depth of field and exposure with your aperture setting", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit, a pariatur molestiae magnam veniam ex, consectetur accusantium aperiam modi perspiciatis ipsa optio facilis est maxime asperiores, deleniti, beatae ut.")
+shutter_speed = Lesson.create(topic: "Shutterspeed", blurb: "Stop the action, or turn waterfalls into ribbons", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit, a pariatur molestiae magnam veniam ex, consectetur accusantium aperiam modi perspiciatis ipsa optio facilis est maxime asperiores, deleniti, beatae ut.")
+lens_selection = Lesson.create(topic: "Focal Length", blurb: "Learn the dramatic effect lens focal length can have on your images", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit, a pariatur molestiae magnam veniam ex, consectetur accusantium aperiam modi perspiciatis ipsa optio facilis est maxime asperiores, deleniti, beatae ut.")
 
 flashcard_1 = Flashcard.create(img_url: 'https://c2.staticflickr.com/8/7396/27676995186_57edb7ae03_b.jpg', aperture: 22, shutter_speed:  3125, lesson: Lesson.first)
 flashcard_2 = Flashcard.create(img_url: 'https://c2.staticflickr.com/8/7793/27431407500_d5a607fb4d_b.jpg', aperture: 20, shutter_speed:  31250, lesson: Lesson.first)
