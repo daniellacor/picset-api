@@ -7,17 +7,18 @@ gem 'active_model_serializers'
 gem 'rack-cors'
 gem 'rails-api'
 gem 'flickr.rb'
+gem 'jwt'
+gem 'pg'
 
 gem 'spring', :group => :development
 gem 'pry-rails', :group => :development
 gem 'figaro', :group => :development
 
-gem 'pg'
 
 
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
