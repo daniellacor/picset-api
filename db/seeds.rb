@@ -21,4 +21,3 @@ flashcard_5 = Flashcard.create(img_url: 'https://c2.staticflickr.com/8/7750/2767
 flashcard_6 = Flashcard.create(img_url: 'https://c2.staticflickr.com/8/7386/27705182875_a16b360a69_b.jpg', aperture: 80, shutter_speed:  125000, lesson: Lesson.first)
 flashcard_7 = Flashcard.create(img_url: 'https://c2.staticflickr.com/8/7319/27670035016_13e344228e_b.jpg', aperture: 40, shutter_speed:  2000, lesson: Lesson.first)
 flashcard_8 = Flashcard.create(img_url: 'https://c2.staticflickr.com/8/7498/27592135652_26b5f2ecd5_b.jpg', aperture: 80, shutter_speed:  11760, lesson: Lesson.first)
-
