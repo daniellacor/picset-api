@@ -6,7 +6,7 @@ class ApplicationController < ActionController::API
  end
 
  def current_user
-  binding.pry
+    # binding.pry
    if auth_present?
      user = User.find(auth["user"])
      if user
@@ -16,7 +16,10 @@ class ApplicationController < ActionController::API
  end
 
  def authenticate
-   render json: {error: "unauthorized"}, status: 404 unless logged_in?
+  unless logged_in?
+    binding.pry
+   render json: {error: "unauthorized"}, status: 404
+  end
  end
 
  private
