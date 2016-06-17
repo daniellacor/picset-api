@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+will = User.create(name: "Will Schneekloth", username: 'wschneekloth', email: 'ws@flatironschool.com', password: 'asdf', password_confirmation: 'asdf' )
+daniella = User.create(name: "Daniella Corricelli", username: 'dcorricelli', email: 'dc@flatironschool.com', password: 'asdf', password_confirmation: 'asdf' )
+
 aperture = Lesson.create(topic: "Aperture", blurb: "Learn how to control depth of field and exposure with your aperture setting", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit, a pariatur molestiae magnam veniam ex, consectetur accusantium aperiam modi perspiciatis ipsa optio facilis est maxime asperiores, deleniti, beatae ut.")
 shutter_speed = Lesson.create(topic: "Shutterspeed", blurb: "Stop the action, or turn waterfalls into ribbons", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit, a pariatur molestiae magnam veniam ex, consectetur accusantium aperiam modi perspiciatis ipsa optio facilis est maxime asperiores, deleniti, beatae ut.")
 lens_selection = Lesson.create(topic: "Focal Length", blurb: "Learn the dramatic effect lens focal length can have on your images", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque impedit, a pariatur molestiae magnam veniam ex, consectetur accusantium aperiam modi perspiciatis ipsa optio facilis est maxime asperiores, deleniti, beatae ut.")
