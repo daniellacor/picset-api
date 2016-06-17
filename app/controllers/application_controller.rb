@@ -6,7 +6,6 @@ class ApplicationController < ActionController::API
  end
 
  def current_user
-  binding.pry
    if auth_present?
      user = User.find(auth["user"])
      if user

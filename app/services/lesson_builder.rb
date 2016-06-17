@@ -9,7 +9,6 @@ class LessonBuilder
     photos = FlickrSearcher.photo_search
     flashcards = []
     photos.each do |photo|
-      binding.pry
       metadata = FlickrSearcher.get_photo_metadata(photo)
       unless metadata == {}
         aperture = metadata[:aperture]
