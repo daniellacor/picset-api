@@ -4,6 +4,11 @@ module Api
       def index
         render json: Flashcard.all
       end
+
+      def show
+        @flashcard = Flashcard.find(params[:id])
+        render json: @flashcard
+      end
     end
   end
 end
