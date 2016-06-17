@@ -16,7 +16,6 @@ class ApplicationController < ActionController::API
 
  def authenticate
   unless logged_in?
-    binding.pry
    render json: {error: "unauthorized"}, status: 404
   end
  end
