@@ -6,7 +6,6 @@ module Api
       end
 
       def me
-        binding.pry
         render json: current_user
       end
     end
