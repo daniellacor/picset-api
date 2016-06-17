@@ -7,7 +7,7 @@ module Api
 
       def show
         @lesson = Lesson.find(params[:id])
-        render json: @lesson.include(:flashcards), include: ['flashcards']
+        render json: @lesson, include: ['flashcards']
       end
     end
   end
