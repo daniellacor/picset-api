@@ -5,11 +5,7 @@ module Api
       def create
         user = User.new(user_params)
         if user.save
-          binding.pry
           render json: user
-          # render json: {:user => {email: user.email, name: user.name, password: user.password}}
-          # jwt= Auth.issue({user: user.id})
-          # render json: {jwt: jwt}
         else
           render json: {:errors => [{:detail => "sign up failed",
             source => {:pointer=>"user/err_type"}}]}, status:404
